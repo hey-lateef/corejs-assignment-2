@@ -4,7 +4,7 @@ const getsqrt = (sqr)=>{
 }
 //Example
 let num = getsqrt(2);
-// console.log(`The square root of 2 is ${num}`);
+console.log(`The square root of 2 is ${num}`);
 
 //Q2 Solution:
 const ages = [19,22,24,20,25,26,24,25,24]
@@ -53,4 +53,18 @@ console.log(range);
 const absMinDiff = Math.abs(minAge - avgAge);
 const absMaxDiff = Math.abs(maxAge - avgAge);
 console.log(`The Value of the (min - avg) : ${absMinDiff} and (max - avg) ${absMaxDiff}`);
+
+//Q3 solution
+const ContactInfo = new Map()
+function addContact(name,age,email,location){
+  //creating object
+  const contactDetails = {age,email,location};
+  //setting contact ino in name
+  ContactInfo.set(name,contactDetails);
+  //getting contactInfo by get()
+  return ContactInfo.get(name);
+}
+
+const contact1 = addContact("Syed Rahman Ur Lateef",22,"rahmanlateef5@gmail.com","Hyderabad");
+console.log(contact1);
 

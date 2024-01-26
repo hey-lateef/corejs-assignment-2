@@ -85,3 +85,20 @@ person2 ={
   }
   person2.Introduce.call(person1,22)
 
+  //Q5 Solution
+
+  const getUniqueSqrt = (arr)=>{
+    //Getting unique Array from the array
+    const uniqueArr = [...new Set (arr)];
+    //creating Square Root of each element of an Array
+    const SqrtOfArray = uniqueArr.map((val)=>{
+      return val**2;
+    });
+    //printing Unique Array and Square root of each element of an Array
+    console.log(`The Unique Elemtnts of an Array is: ${uniqueArr}`);
+    console.log(`The Square Root of the each array elements is: ${SqrtOfArray}`);
+
+  }
+
+  const myArr = [1,2,3,4,5,6,1,3,4,5,6,6,7,8];
+  getUniqueSqrt(myArr)
